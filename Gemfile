@@ -1,5 +1,13 @@
 source 'https://rubygems.org'
 
+# Lignes ajoutés pour l'authentification par Marius
+
+gem 'pg'
+gem 'therubyracer'
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem "bootstrap-sass"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
