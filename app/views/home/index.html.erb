@@ -8,7 +8,6 @@
 
 
 <% if current_user.superadmin_role? || current_user.supervisor_role? %>
-
 	<p>Visible only for superadmins and supervisors! </p>
 	<%= link_to('Edit registration', edit_user_registration_path)  %>
 <% end %>
