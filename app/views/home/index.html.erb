@@ -7,11 +7,19 @@
 <% end %>
 
 
-<% if current_user.superadmin_role? || current_user.supervisor_role? %>
+<% if current_user.superadmin_role? %>
+	<p>Visible only for Directeur  </p>
+	
+	<%= link_to('Nouveau Employe', home_create_path) %> 
 
-	<p>Visible only for superadmins and supervisors! </p>
+
+<% end %>
+<% if current_user.supervisor_role? %>
+	<p>Visible only for Coordonnateur </p>
 	<%= link_to('Edit registration', edit_user_registration_path)  %>
 <% end %>
+
+
 
 
 
