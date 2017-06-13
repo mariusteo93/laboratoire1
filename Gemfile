@@ -1,8 +1,21 @@
 source 'https://rubygems.org'
 
 
+# Cancancan
+gem 'cancancan'
+
+# For The Adim man
+gem 'remotipart', github: 'mshibuya/remotipart'
+gem 'rails_admin', '>= 1.0.0.rc'
+
+# Devise
+gem 'devise', github: 'plataformatec/devise', ref: '83002017'
+
+# Toastr-rails
+gem 'toastr-rails'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5'
+gem 'rails', '5.0.0.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
