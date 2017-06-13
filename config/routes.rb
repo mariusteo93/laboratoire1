@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'cu03/organisme'
+  get 'cu03', to: 'cu03#organisme'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
