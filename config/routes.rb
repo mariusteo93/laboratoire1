@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :organisme_referants
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   
   get 'home/index'
@@ -15,7 +16,7 @@ Rails.application.routes.draw do
   get 'home/new'
 
   
-  get 'home/create'
+  post 'home/create'
   
   
 
