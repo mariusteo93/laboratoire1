@@ -2,11 +2,17 @@
   <%= link_to "Log in", new_session_path(resource_name) %><br />
 <% end -%>
 
+<<<<<<< HEAD
 <!--
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
   <%= link_to "Sign up", new_registration_path(resource_name) %><br />
 <% end -%> 
 -->
+=======
+<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+  <%= link_to "Sign up", new_registration_path(resource_name) %><br />
+<% end -%>
+>>>>>>> fc8ef5476b2ac49562fbffd8f92af95e1557a0cc
 
 <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
   <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
