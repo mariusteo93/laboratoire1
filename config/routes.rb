@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :organismes
+  resources :organisations
   resources :organisme_referants
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   

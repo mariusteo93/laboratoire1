@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @organisme.Nom %>
+</p>
+
+<p>
+  <strong>Adresse:</strong>
+  <%= @organisme.Adresse %>
+</p>
+
+<p>
+  <strong>Courriel:</strong>
+  <%= @organisme.Courriel %>
+</p>
+
+<p>
+  <strong>Telephone:</strong>
+  <%= @organisme.Telephone %>
+</p>
+
+<p>
+  <strong>Fax:</strong>
+  <%= @organisme.Fax %>
+</p>
+
+<%= link_to 'Edit', edit_organisme_path(@organisme) %> |
+<%= link_to 'Back', organismes_path %>

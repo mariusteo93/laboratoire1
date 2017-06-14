@@ -1,0 +1,42 @@
+<%= form_for(organisme) do |f| %>
+  <% if organisme.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(organisme.errors.count, "error") %> prohibited this organisme from being saved:</h2>
+
+      <ul>
+      <% organisme.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Nom %>
+    <%= f.text_field :Nom %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Adresse %>
+    <%= f.text_field :Adresse %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Courriel %>
+    <%= f.text_field :Courriel %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Telephone %>
+    <%= f.text_field :Telephone %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Fax %>
+    <%= f.text_field :Fax %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
