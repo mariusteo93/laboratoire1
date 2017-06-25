@@ -1,3 +1,29 @@
 // Place all the styles related to the landingPage controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1{
+    
+    color: blue;
+    font-family: verdana;
+    font-size: 300%;
+    
+}
+body {
+    
+    color:black;
+    background-color:white;
+    background-image:url(/assets/images/backgroundImage.jpg);
+    background-repeat:no-repeat;
+}
+
+.login-button {
+    background-color: #DB871E; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
