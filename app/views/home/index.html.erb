@@ -7,10 +7,15 @@
 <% end %>
 
 
+<<<<<<< HEAD
 <% if current_user.superadmin_role? %>
 	<p>Visible only for Directeur  </p>
 	
-	<%= link_to('Nouveau Employe', home_new_path) %> 
+	<%= link_to('Nouveau Employe', home_new_path) %> <br />
+	
+      <%= link_to('Gerer les organismes ', organismes_url) %> 
+	
+
 
 
 <% end %>
@@ -18,9 +23,18 @@
 	<p>Visible only for Coordonnateur </p>
 	
 	<%= link_to('Créer organisme référent', organisme_referants_path)  %>
+=======
+<% if current_user.superadmin_role? || current_user.supervisor_role? %>
+
+	<p>Visible only for superadmins and supervisors! </p>
+	<%= link_to('Edit registration', edit_user_registration_path)  %>
+>>>>>>> fc8ef5476b2ac49562fbffd8f92af95e1557a0cc
 <% end %>
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> fc8ef5476b2ac49562fbffd8f92af95e1557a0cc

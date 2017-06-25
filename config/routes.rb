@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
+  resources :organismes
+  resources :organisations
   resources :organisme_referants
+=======
+>>>>>>> fc8ef5476b2ac49562fbffd8f92af95e1557a0cc
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   
   get 'home/index'
@@ -9,6 +14,7 @@ Rails.application.routes.draw do
     passwords: 'users/passwords',
     registrations: 'users/registrations'
   }
+<<<<<<< HEAD
   
 
   
@@ -20,6 +26,8 @@ Rails.application.routes.draw do
   
   
 
+=======
+>>>>>>> fc8ef5476b2ac49562fbffd8f92af95e1557a0cc
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

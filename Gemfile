@@ -1,9 +1,12 @@
 source 'https://rubygems.org'
 
 
+<<<<<<< HEAD
 # MailGun
 gem 'mailgun-ruby', '~>1.1.6'
 
+=======
+>>>>>>> fc8ef5476b2ac49562fbffd8f92af95e1557a0cc
 # Cancancan
 gem 'cancancan'
 
