@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
 
+# Bulma CSS FrameWork
+gem "bulma-rails", "~> 0.4.2"
+
 # MailGun
 gem 'mailgun-ruby', '~>1.1.6'
 

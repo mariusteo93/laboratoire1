@@ -1,5 +1,5 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h1>Page Home</h1>
+
 
 
 <% if user_signed_in? %>
@@ -7,10 +7,20 @@
 <% end %>
 
 
-<% if current_user.superadmin_role? || current_user.supervisor_role? %>
-	<p>Visible only for superadmins and supervisors! </p>
-	<%= link_to('Edit registration', edit_user_registration_path)  %>
+<% if current_user.superadmin_role? %>
+	<p>Visible only for Directeur  </p>
+	
+	<%= link_to('Nouveau Employe', home_new_path) %> 
+
+
 <% end %>
+<% if current_user.supervisor_role? %>
+	<p>Visible only for Coordonnateur </p>
+	
+	<%= link_to('Créer organisme référent', organisme_referants_path)  %>
+<% end %>
+
+
 
 
 
