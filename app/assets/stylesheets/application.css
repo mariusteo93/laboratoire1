@@ -15,30 +15,3 @@
  *= require_toastr
  */
 
-@import "bulma";
-@import "bootstrap-sprockets";
-@import "bootstrap";
-
-section {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    border: 3px solid blue;
-    }
-    
-nav { 
-    position: absolute;
-    bottom: 0px;
-    border: 3px solid black;
-    }
-
-footer {
-    position: absolute;
-    bottom: 0px;
-    border: 3px solid red;
-    }   
-
-    
-
-        
-    

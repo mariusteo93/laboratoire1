@@ -1,9 +1,13 @@
 <head>
-    <h1>Entete de cette page </h1>
+  <link rel="stylesheet" href="landing_page.scss">
 </head>
-    
-<body>
-<h1>Page LandingPage</h1>
+<body background="/home/ubuntu/workspace/app/assets/images/backgroundImage.jpg"> 
+
+</body>
+
+<h1>Bienvenue a la page d'acceuil</h1>
+
+
 
 <% if current_user.nil? %>
 	<%= link_to new_user_session_path, class: 'login-button' do %>Sign in<% end %>
@@ -16,4 +20,3 @@
       <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
         
 <% end %>
-</body>
