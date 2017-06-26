@@ -1,16 +1,11 @@
 source 'https://rubygems.org'
 
+# CSS Bulma
+gem "bulma-rails", "~> 0.4.2"
 
 # MailGun
 gem 'mailgun-ruby', '~>1.1.6'
 
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> 8a621b3b5001fdd31fde6c65e33b7945ca2cb188
 # Cancancan
 gem 'cancancan'
 

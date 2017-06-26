@@ -5,12 +5,35 @@
 
 <% @page_title = "UserAuth | Signup" %>
 <div class="Sign_Form">
-  <h1>Sign Up</h1>
+  <h1>Creer un usager</h1>
+  
   <%= form_for(:user, :url => {:controller => 'home', :action => 'create'}) do |f| %>
+   
    
     <p> Email:</br> <%= f.text_field :email%> </p>
     <p> Password:</br> <%= f.password_field :password%></p>
     <p> Password Confirmation:</br> <%= f.password_field :password_confirmation%> </p>
+ 
+   
+  
+   <p> Role : </br>
+   <select Role = "Role" >
+                             <optgroup label="Role"> 
+                             
+                              <% if current_user.superadmin_role? %>
+                            <option value="Directeur"> Directeur</option>
+                            <% end %>
+                            
+                            <option value="Coordonateur">Coordonateur</option>
+                            <option value="AdjointCoordonateur">Adjoint coordonateur</option>
+                            <option value="Intervenant">Intervenant</option
+                             </optgroup>
+   </select> 
+   </p>
+    
+    
+    
+    
     <%= f.submit :Signup %>
   <% end %>
   <% if @user.errors.any? %>
