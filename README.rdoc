@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 Jaime les oiseaux.
+=======
+>>>>>>> 8a621b3b5001fdd31fde6c65e33b7945ca2cb188
 == README
 
 This README would normally document whatever steps are necessary to get the
