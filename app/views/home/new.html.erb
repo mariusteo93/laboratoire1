@@ -1,0 +1,23 @@
+<h1>Home#create</h1>
+<p>Find me in app/views/home/formulaireCreationUsager.html.erb</p>
+
+
+
+<% @page_title = "UserAuth | Signup" %>
+<div class="Sign_Form">
+  <h1>Sign Up</h1>
+  <%= form_for(:user, :url => {:controller => 'home', :action => 'create'}) do |f| %>
+   
+    <p> Email:</br> <%= f.text_field :email%> </p>
+    <p> Password:</br> <%= f.password_field :password%></p>
+    <p> Password Confirmation:</br> <%= f.password_field :password_confirmation%> </p>
+    <%= f.submit :Signup %>
+  <% end %>
+  <% if @user.errors.any? %>
+    <ul class="Signup_Errors">
+    <% for message_error in @user.errors.full_messages %>
+      <li>* <%= message_error %></li>
+    <% end %>
+    </ul>
+  <% end %>
+</div>

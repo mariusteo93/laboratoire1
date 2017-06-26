@@ -1,0 +1,72 @@
+<%= form_for(organisme_referant) do |f| %>
+  <% if organisme_referant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(organisme_referant.errors.count, "error") %> prohibited this organisme_referant from being saved:</h2>
+
+      <ul>
+      <% organisme_referant.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nom %>
+    <%= f.text_field :nom %>
+  </div>
+
+  <div class="field">
+    <%= f.label :noCivique %>
+    <%= f.text_field :noCivique %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rue %>
+    <%= f.text_field :rue %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ville %>
+    <%= f.text_field :ville %>
+  </div>
+
+  <div class="field">
+    <%= f.label :province %>
+    <%= f.text_field :province %>
+  </div>
+
+  <div class="field">
+    <%= f.label :etat %>
+    <%= f.text_field :etat %>
+  </div>
+
+  <div class="field">
+    <%= f.label :codePostal %>
+    <%= f.text_field :codePostal %>
+  </div>
+
+  <div class="field">
+    <%= f.label :telephoneBureau %>
+    <%= f.text_field :telephoneBureau %>
+  </div>
+
+  <div class="field">
+    <%= f.label :telephoneTelecopie %>
+    <%= f.text_field :telephoneTelecopie %>
+  </div>
+
+  <div class="field">
+    <%= f.label :courriel %>
+    <%= f.text_field :courriel %>
+  </div>
+
+  <div class="field">
+    <%= f.label :siteWeb %>
+    <%= f.text_field :siteWeb %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
