@@ -1,33 +1,38 @@
-
-<% if current_user.superadmin_role? %>
-
-		
+<% if current_user.directeur_role? %>
 	<h1> Je suis un directeur  </h1></br>
-	<h1> Je peux creer :  </h1> </br>
+	<p>
+		<h1> Je peux creer :  
+		<%= link_to('creer un employe', home_new_path) %>
+		</h1> 
+		</br>
+	</p>
 	
-	<%= link_to('creer un employe', home_new_path) %>
-
 	
-
+	<p>
+		<h1> Je peux desactiver un usager :  </h1>
+		<% @users.each do |user| %>
+		<p> <%=user.email %> </p>
+	
+	
+		<% end %>
+	</p>
 <% end %>
 
 
-<% if current_user.supervisor_role? %>
+<% if current_user.coordonateur_role? %>
 	<h1> Je suis un Coordonateur  </h1> </br>
 	<h1> Je peux creer :  </h1> </br>
-	
-	
 	<%= link_to('creer un employe', home_new_path) %></br>
 	<%= link_to('Créer organisme référent', organisme_referants_path)  %>
-	
 <% end %>
 
-<% if current_user.user_role?  %>
-	<h1> Je suis un usager  </h1>
+<% if current_user.adjoint_coordonateur_role?  %>
+	<h1> Je suis un Adjoint Coordonateur  </h1>
 <% end %>
 
-
-
+<% if current_user.intervenant_role?  %>
+	<h1> Je suis un intervenant  </h1>
+<% end %>
 
 <% if user_signed_in? %>
       <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
