@@ -8,14 +8,26 @@
 	</p>
 	
 	
-	<p>
-		<h1> Je peux desactiver un usager :  </h1>
-		<% @users.each do |user| %>
-		<p> <%=user.email %> </p>
-	
-	
-		<% end %>
-	</p>
+<h1> Je peux desactiver un usager :  </h1>
+	<table>
+		
+			
+			<th>Usager</th>
+			<th>Action</th>
+			
+			<% @users.each do |user| %>
+			<tr>
+				<td><p><%=user.email %></p></td>
+				<td><p>Les actions</p></td>
+			</tr>
+			<% end %>
+			
+		
+
+			
+  		
+	</table>
+
 <% end %>
 
 

@@ -39,9 +39,15 @@ class HomeController < ApplicationController
     end
   
   
-    def destroy
-     @user.destroy
+  # DELETE /organisme_referants/1
+  # DELETE /organisme_referants/1.json
+  def destroy
+    @user.destroy
+    respond_to do |format|
+      format.html { redirect_to user_url, notice: 'Organisme referant was successfully destroyed.' }
+      format.json { head :no_content }
     end
+  end
 
 end
 
