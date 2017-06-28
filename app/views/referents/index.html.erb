@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Referents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Prenom</th>
+      <th>Titre</th>
+      <th>Tellcell</th>
+      <th>Tellbur</th>
+      <th>Fax</th>
+      <th>Courriel</th>
+      <th>Preference</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @referents.each do |referent| %>
+      <tr>
+        <td><%= referent.nom %></td>
+        <td><%= referent.prenom %></td>
+        <td><%= referent.titre %></td>
+        <td><%= referent.tellCell %></td>
+        <td><%= referent.tellBur %></td>
+        <td><%= referent.fax %></td>
+        <td><%= referent.courriel %></td>
+        <td><%= referent.preference %></td>
+        <td><%= link_to 'Show', referent %></td>
+        <td><%= link_to 'Edit', edit_referent_path(referent) %></td>
+        <td><%= link_to 'Destroy', referent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Referent', new_referent_path %>

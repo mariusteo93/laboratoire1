@@ -1,0 +1,57 @@
+<%= form_for(referent) do |f| %>
+  <% if referent.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(referent.errors.count, "error") %> prohibited this referent from being saved:</h2>
+
+      <ul>
+      <% referent.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nom %>
+    <%= f.text_field :nom %>
+  </div>
+
+  <div class="field">
+    <%= f.label :prenom %>
+    <%= f.text_field :prenom %>
+  </div>
+
+  <div class="field">
+    <%= f.label :titre %>
+    <%= f.text_field :titre %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tellCell %>
+    <%= f.text_field :tellCell %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tellBur %>
+    <%= f.text_field :tellBur %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fax %>
+    <%= f.text_field :fax %>
+  </div>
+
+  <div class="field">
+    <%= f.label :courriel %>
+    <%= f.text_field :courriel %>
+  </div>
+
+  <div class="field">
+    <%= f.label :preference %>
+    <%= f.text_field :preference %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

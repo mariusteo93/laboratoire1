@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @referent.nom %>
+</p>
+
+<p>
+  <strong>Prenom:</strong>
+  <%= @referent.prenom %>
+</p>
+
+<p>
+  <strong>Titre:</strong>
+  <%= @referent.titre %>
+</p>
+
+<p>
+  <strong>Tellcell:</strong>
+  <%= @referent.tellCell %>
+</p>
+
+<p>
+  <strong>Tellbur:</strong>
+  <%= @referent.tellBur %>
+</p>
+
+<p>
+  <strong>Fax:</strong>
+  <%= @referent.fax %>
+</p>
+
+<p>
+  <strong>Courriel:</strong>
+  <%= @referent.courriel %>
+</p>
+
+<p>
+  <strong>Preference:</strong>
+  <%= @referent.preference %>
+</p>
+
+<%= link_to 'Edit', edit_referent_path(@referent) %> |
+<%= link_to 'Back', referents_path %>
